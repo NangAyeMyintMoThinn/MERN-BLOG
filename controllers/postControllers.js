@@ -17,7 +17,7 @@ const createPost = async (req, res, next) => {
         }
 
         const { thumbnail } = req.files;
-        if (thumbnail.size > 20000000) {
+        if (thumbnail.size > 2000000) {
             return next(new HttpError("Thumbnail too big. File should be less than 2mb."))
         }
         let fileName = thumbnail.name;
@@ -134,7 +134,7 @@ const editPost = async (req, res, next) => {
                 //upload new thumbnail
                 const { thumbnail } = req.files;
                 //check file size
-                if (thumbnail.size > 20000000) {
+                if (thumbnail.size > 2000000) {
                     return next(new HttpError("Thumbnail too big. File should be less than 2mb."))
                 }
                 fileName = thumbnail.name;
