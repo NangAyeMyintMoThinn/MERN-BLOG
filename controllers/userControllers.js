@@ -73,8 +73,8 @@ const loginUser = async (req, res, next) => {
 }
 
 // User Profile
-// Post: api/users/:id
-//protected
+// GET: api/users/:id
+// unprotected
 
 const getUser = async (req, res, next) => {
     try {
@@ -92,7 +92,7 @@ const getUser = async (req, res, next) => {
 
 // Change User profile picture
 // Post: api/users/change-avatar
-//protected
+// protected
 
 const changeAvatar = async (req, res, next) => {
     try {
@@ -137,8 +137,8 @@ const changeAvatar = async (req, res, next) => {
 }
 
 // Edit User Details
-// Post: api/users/edit-user
-//protected
+// PATCH: api/users/edit-user
+// protected
 
 const editUser = async (req, res, next) => {
     try {
@@ -179,7 +179,7 @@ const editUser = async (req, res, next) => {
 
 // Get authors
 // Post: api/users/authors
-//unprotected
+// unprotected
 
 const getAuthors = async (req, res, next) => {
     try {

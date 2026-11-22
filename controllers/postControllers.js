@@ -62,7 +62,7 @@ const getPosts = async (req, res, next) => {
 
 // get a post
 // GET : api/posts/:id
-// UNProtected
+// UNProtected (read a post)
 const getPost = async (req, res, next) => {
     try {
         const postId = req.params.id;
